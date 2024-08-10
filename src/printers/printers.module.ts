@@ -5,6 +5,7 @@ import { Printers } from './printers.model';
 
 @Module({
   imports: [SequelizeModule.forFeature([Printers])],
-  providers: [PrintersService]
+  providers: [PrintersService],
+  exports: [PrintersService]
 })
 export class PrintersModule { }

@@ -1,4 +1,4 @@
-import { Column, ForeignKey, Model, Table } from 'sequelize-typescript';
+import { BelongsTo, Column, ForeignKey, HasOne, Model, Table } from 'sequelize-typescript';
 import { Orders } from './orders.model';
 import { Products } from 'src/products/products.model';
 
@@ -20,4 +20,10 @@ export class Order_Items extends Model {
         allowNull: false
     })
     quantity: number;
+
+    @BelongsTo(() => Orders)
+    orders: Orders[];
+
+    @HasOne(() => Products)
+    product: Products;
 }

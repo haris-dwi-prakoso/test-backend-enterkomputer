@@ -5,6 +5,7 @@ import { Tables } from './tables.model';
 
 @Module({
   imports: [SequelizeModule.forFeature([Tables])],
-  providers: [TablesService]
+  providers: [TablesService],
+  exports: [TablesService]
 })
 export class TablesModule { }

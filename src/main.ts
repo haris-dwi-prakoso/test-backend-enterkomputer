@@ -8,7 +8,7 @@ async function bootstrap() {
     .setTitle('Test Backend Enterkomputer')
     .setDescription('API untuk test backend enterkomputer')
     .setVersion('1.0')
-    .addTag('enterkomputer')
+    .addTag('orders')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('docs', app, document);
